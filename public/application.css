@@ -24,15 +24,17 @@ a {
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 0;
+  padding: 260px 0;
   margin: 0;
   background-image: url("images/kawhishot.jpeg")
 }
 
 .container {
-  width: 1050px;
+  width: 1051px;
   margin: auto;
   text-align: center;
+  flex-direction: row;
+  align-content: center;
 }
 
 .banner > .container > h1 , p , .btn-green {
@@ -54,18 +56,29 @@ a {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
 }
 
 .games-card {
   background-color: white;
   box-shadow: 0 0 5px rgb(230,230,230);
-  border-radius: 4px;
+  border-radius: 33px;
   border: 1px solid rgb(230,230,230);
-  margin-bottom: 50px;
-  width: 300px;
-  text-align: center;
+  width: 560px;
+  height: 115px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.avatar {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  border-radius: 50%;
+  border: 1px solid rgb(230,230,230);
 }
 
 
@@ -89,6 +102,7 @@ a {
   background-color: #2c2b2b;
   text-align: center;
   padding: 60px;
+  margin-top: 50px;
 }
 
 .footer a {
