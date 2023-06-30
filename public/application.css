@@ -70,11 +70,12 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 30px;
 }
 
 .avatar {
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   display: inline-block;
   box-shadow: 0 0 5px rgb(230,230,230);
   border-radius: 50%;
@@ -108,4 +109,213 @@ a {
 .footer a {
   font-size: 50px;
   color:  #1EDD88;
+}
+
+#Hawks {
+  background-image: url("images/hawks-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Celtics {
+  background-image: url("images/celtics-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+#Nets {
+  background-image: url("images/nets-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Hornets {
+  background-image: url("images/hornets-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Bulls {
+  background-image: url("images/bulls-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Cavaliers {
+  background-image: url("images/cavaliers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Mavericks {
+  background-image: url("images/mavericks-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Nuggets {
+  background-image: url("images/nuggets-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Pistons {
+  background-image: url("images/pistons-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Warriors {
+  background-image: url("images/warriors-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Rockets {
+  background-image: url("images/rockets-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Pacers {
+  background-image: url("images/pacers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Clippers {
+  background-image: url("images/clippers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Lakers {
+  background-image: url("images/lakers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Grizzlies {
+  background-image: url("images/grizzilies-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+}
+
+#Heat {
+  background-image: url("images/heat-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Bucks {
+  background-image: url("images/bucks-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Timberwolves {
+  background-image: url("images/timberwolves-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Pelicans {
+  background-image: url("images/pelicans-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Knicks {
+  background-image: url("images/knicks-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Thunder {
+  background-image: url("images/thunder-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Magic {
+  background-image: url("images/magic-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#sixers {
+  background-image: url("images/76ers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Suns {
+  background-image: url("images/suns-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#TrailBlazers {
+  background-image: url("images/trailblazers-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Kings {
+  background-image: url("images/kings-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+}
+
+#Spurs {
+  background-image: url("images/spurs-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Raptors {
+  background-image: url("images/raptors-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Jazz {
+  background-image: url("images/jazz-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+#Wizards {
+  background-image: url("images/wizards-logo.gif");
+  background-position: 50%,10%;
+  background-repeat: no-repeat;
+    background-size: 80px;
 }

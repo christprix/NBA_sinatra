@@ -1,0 +1,15 @@
+<% @games.each do |game| %>
+  <div class="games-card" id="game-info">
+    <div class="avatar" id="<%= game['home_team']['name'].delete(' ') %>">
+    </div>
+    <div>
+      <h5> <%= game['home_team']['name'] %> <%= game['home_team_score'] %></h5>
+    </div>
+    <h3> vs </h3>
+    <div>
+      <h5> <%= game['visitor_team']['name'] %> <%= game['visitor_team_score'] %></h5>
+    </div>
+    <div class="avatar" id="<%= game['visitor_team']['name'].delete(' ') %>">
+    </div>
+  </div>
+<% end %>
