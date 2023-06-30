@@ -19,11 +19,7 @@ get '/' do
   response = Net::HTTP.get(uri)
   game_data = JSON.parse(response)
   @games = game_data['data']
-  p @games.size
   erb :index
-  # store response in game data
-  # @game_data = game_data['data']
-  # @game_data.update
 end
 # get '/index' do
 #   # @teams = Team.all
