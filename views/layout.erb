@@ -14,20 +14,23 @@
   <div class="banner">
     <div class="container">
       <h1>
-        NBA Playoff Tracker!
+        NBA Game Tracker!
       </h1>
       <p>
         Track your favorite team and get minute to minute updates!
       </p>
-      <a href="#" class="btn-green">
-        View Today's Games!
-      </a>
+      <div class="my-4">
+        <form action="/">
+          <input type="date" id="start" name="gamedate">
+          <button class="btn-green">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
     <!-- code a "How it works" section -->
   <div class="container">
     <div class="row">
-      <h2 style="margin-top: 30px; margin-bottom: 20px;">Today's Games</h2>
+      <h2 style="margin-top: 30px; margin-bottom: 20px;">Games</h2>
       <div class="cards">
         <%= yield %>
       </div>

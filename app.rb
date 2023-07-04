@@ -15,13 +15,26 @@ get '/' do
   lw = DateTime.now.prev_day(6).strftime('%Y-%m-%d')
   d = DateTime.now.strftime('%Y-%m-%d')
   # make api call using dates
-  uri = URI('https://www.balldontlie.io/api/v1/games?start_date=2023-01-23&end_date=2023-01-23')
-  response = Net::HTTP.get(uri)
-  game_data = JSON.parse(response)
-  @games = game_data['data']
-  erb :index
+  if params[:gamedate].nil?
+    uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{d}&end_date=#{d}")
+    response = Net::HTTP.get(uri)
+    game_data = JSON.parse(response)
+    @games = game_data['data']
+    erb :index
+  else
+    uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{params[:gamedate]}&end_date=#{params[:gamedate]}")
+    response = Net::HTTP.get(uri)
+    game_data = JSON.parse(response)
+    @games = game_data['data']
+    erb :index
+  end
 end
-# get '/index' do
-#   # @teams = Team.all
-#   # erb :index
+
+# get '/params[:gamedate]' do
+#   uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{params['gamedate']}&end_date=#{params['gamedate']}")
+#   response = Net::HTTP.get(uri)
+#   game_data = JSON.parse(response)
+#   @games = game_data['data']
+#   p params[:gamedate]
+#   erb :index
 # end

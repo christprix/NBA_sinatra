@@ -1,0 +1,5 @@
+<ul>
+  <% @gameinfo.each do |stats| %>
+    <li><%= stats['player']['first_name'] %> <%= stats['player']['last_name'] %> : <%= stats['pts'] %></li>
+  <% end %>
+</ul>
