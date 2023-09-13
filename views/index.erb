@@ -3,34 +3,42 @@
 <% else %>
   <% @games.each do |game| %>
     <div class="games-card btn">
-      <div class="avatar" id="<%= game['home_team']['name'].delete(' ') %>">
-      </div>
-      <div class="row">
-        <div>
-          <h5> <%= game['home_team']['name'] %></h5>
+      <% if game['home_team']['name'].delete(' ') == "76ers" %>
+        <div class="avatar" id="sixers">
+        <% else %>
+          <div class="avatar" id="<%= game['home_team']['name'].delete(' ') %>">
+          <% end %>
         </div>
-        <div>
-          <%= game['home_team_score'] %>
-        </div>
-      </div>
-      <h3> vs </h3>
-      <div>
         <div class="row">
           <div>
-            <h5> <%= game['visitor_team']['name'] %> </h5>
+            <h5> <%= game['home_team']['name'] %></h5>
           </div>
           <div>
-            <%= game['visitor_team_score'] %>
+            <%= game['home_team_score'] %>
           </div>
         </div>
-      </div>
-      <div class="avatar" id="<%= game['visitor_team']['name'].delete(' ') %>">
-      </div>
-    </div>
-    <div class="moreGameData">
-      <div>
-        game highlights
-      </div>
-    </div>
-  <% end %>
-<% end %>
+        <h3> vs </h3>
+        <div>
+          <div class="row">
+            <div>
+              <h5> <%= game['visitor_team']['name'] %> </h5>
+            </div>
+            <div>
+              <%= game['visitor_team_score'] %>
+            </div>
+          </div>
+        </div>
+        <% if game['visitor_team']['name'].delete(' ') == "76ers" %>
+          <div class="avatar" id="sixers">
+          <% else %>
+            <div class="avatar" id="<%= game['visitor_team']['name'].delete(' ') %>">
+            <% end %>
+          </div>
+        </div>
+        <div class="moreGameData">
+          <div>
+            game highlights
+          </div>
+        </div>
+      <% end %>
+    <% end %>
