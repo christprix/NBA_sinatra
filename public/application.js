@@ -7,7 +7,7 @@ gameCard.forEach((element) => {
     if (gameData.style.display === 'block') {
       gameData.style.display = "none";
     } else {
-      gameData.style.display = "block";
+      gameData.style.display = "flex";
     }
   })
 });
