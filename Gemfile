@@ -11,3 +11,5 @@ gem 'sqlite3'
 gem "rake"
 gem "rest-client"
 gem "rspec"
+gem 'google-api-client', '>0.7'
+gem 'httparty'
