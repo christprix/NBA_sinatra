@@ -20,21 +20,23 @@ get '/' do
     response = Net::HTTP.get(uri)
     game_data = JSON.parse(response)
     @games = game_data['data']
+    # get game id for stats api call
+    @gamesid = game_data['data'][0]['id']
     erb :index
   else
     uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{params[:gamedate]}&end_date=#{params[:gamedate]}")
     response = Net::HTTP.get(uri)
     game_data = JSON.parse(response)
     @games = game_data['data']
+    # get game id for stats api call
+    gamesid = game_data['data'][0]['id']
+    @gamestats = getstats(gamesid)['data']
     erb :index
   end
 end
 
-# get '/params[:gamedate]' do
-#   uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{params['gamedate']}&end_date=#{params['gamedate']}")
-#   response = Net::HTTP.get(uri)
-#   game_data = JSON.parse(response)
-#   @games = game_data['data']
-#   p params[:gamedate]
-#   erb :index
-# end
+def getstats(id)
+  uri = URI("https://www.balldontlie.io/api/v1/stats?game_ids[]=#{id}")
+  response = Net::HTTP.get(uri)
+  JSON.parse(response)
+end

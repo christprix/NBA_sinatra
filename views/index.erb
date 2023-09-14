@@ -1,7 +1,7 @@
 <% if @games.size == 0 %>
   <h3>Sorry looks like there are no games</h3>
 <% else %>
-  <% @games.each do |game| %>
+  <% @games.each do |game, id| %>
     <div class="games-card btn">
       <% if game['home_team']['name'].delete(' ') == "76ers" %>
         <div class="avatar" id="sixers">
@@ -35,9 +35,15 @@
             <% end %>
           </div>
         </div>
-        <div class="moreGameData">
+        <div class="moreGameData overflow-auto" >
           <div>
-            game highlights
+            <ul>
+              <% @gamestats.each do |stats| %>
+                <li>
+                  <p style="color:black;"> <%= "#{stats['team']}#{stats['player']['first_name']} #{stats['pts']}" %></p>
+                </li>
+              <% end %>
+            </ul>
           </div>
         </div>
       <% end %>
