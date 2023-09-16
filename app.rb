@@ -21,7 +21,7 @@ get '/' do
     game_data = JSON.parse(response)
     @games = game_data['data']
     # get game id for stats api call
-    @gamesid = game_data['data'][0]['id']
+    # @gamesid = game_data['data'][0]['id']
     erb :index
   else
     uri = URI("https://www.balldontlie.io/api/v1/games?start_date=#{params[:gamedate]}&end_date=#{params[:gamedate]}")
@@ -29,8 +29,11 @@ get '/' do
     game_data = JSON.parse(response)
     @games = game_data['data']
     # get game id for stats api call
-    gamesid = game_data['data'][0]['id']
-    @gamestats = getstats(gamesid)['data']
+    # gamesid = game_data['data'][0]['id']
+    # @gamestats = getstats(gamesid)['data']
+    @gamestats = game_data['data'].map do |game_ids|
+      getstats(game_ids['id'])['data']
+    end
     erb :index
   end
 end
