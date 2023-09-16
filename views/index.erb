@@ -1,7 +1,7 @@
 <% if @games.size == 0 %>
   <h3>Sorry looks like there are no games</h3>
 <% else %>
-  <% @games.each do |game, id| %>
+  <% @games.each_with_index do |game, index| %>
     <div class="games-card btn">
       <% if game['home_team']['name'].delete(' ') == "76ers" %>
         <div class="avatar" id="sixers">
@@ -39,10 +39,10 @@
           <div class="d-flex justify-content-center">
             <div>
               <ul>
-                <% @gamestats.each do |stats| %>
+                <% @gamestats[index].each do |stats| %>
                   <% if stats['team']['name'] == game['home_team']['name'] %>
                     <li>
-                      <p style="color:black;"> <%= "#{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
+                      <p style="color:black;"> <%= "#{stats['team']['name']} #{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
                     </li>
                   <% end %>
                 <% end %>
@@ -50,10 +50,10 @@
             </div>
             <div>
               <ul>
-                <% @gamestats.each do |stats| %>
+                <% @gamestats[index].each do |stats| %>
                   <% if stats['team']['name'] == game['visitor_team']['name'] %>
                     <li>
-                      <p style="color:black;"> <%= "#{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
+                      <p style="color:black;"> <%= "#{stats['team']['name']} #{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
                     </li>
                   <% end %>
                 <% end %>
