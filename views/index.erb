@@ -35,31 +35,5 @@
             <% end %>
           </div>
         </div>
-        <div class="moreGameData overflow-auto" >
-          <div class="d-flex justify-content-center">
-            <div>
-              <ul>
-                <% @gamestats[index].each do |stats| %>
-                  <% if stats['team']['name'] == game['home_team']['name'] %>
-                    <li>
-                      <p style="color:black;"> <%= "#{stats['team']['name']} #{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <% @gamestats[index].each do |stats| %>
-                  <% if stats['team']['name'] == game['visitor_team']['name'] %>
-                    <li>
-                      <p style="color:black;"> <%= "#{stats['team']['name']} #{stats['player']['first_name']} #{stats['player']['last_name']} #{stats['pts']}" %></p>
-                    </li>
-                  <% end %>
-                <% end %>
-              </ul>
-            </div>
-          </div>
-        </div>
       <% end %>
     <% end %>
