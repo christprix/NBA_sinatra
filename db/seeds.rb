@@ -2,7 +2,7 @@ require "json"
 require "rest-client"
 require_relative "../models/team"
 require_relative "../models/game"
-require_relative "../models/player"
+# require_relative "../models/player"
 # Get Last weeks date
 # Get today's date
 # lw = DateTime.now.prev_day(6).strftime('%Y-%m-%d')
@@ -18,7 +18,6 @@ team_data.each do |element|
     abbreviation: element["abbreviation"],
     division: element["division"],
     city: element["city"])
-  team.save
 end
 
 # Make JSON request using the date and last weeks date
