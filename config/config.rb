@@ -1,5 +1,5 @@
 require 'active_record'
-require 'sqlite3'
+require 'pg'
 require 'yaml'
 
 config_path = File.join(__dir__, "database.yml")
